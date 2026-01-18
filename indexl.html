@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reliable Didcot Taxi Service | Local & Airport Transfers | ALLO Taxis</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #0f2027, #2c5364);
+            padding: 15px 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo {
+            color: #00d4ff;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .header-contacts {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .header-phone, .header-email {
+            background: #00d4ff;
+            color: #0f2027;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+
+        .header-phone:hover, .header-email:hover {
+            background: #00fff7;
+            transform: translateY(-2px);
+        }
+
+        .hero {
+            background: linear-gradient(135deg, rgba(15,32,39,0.9), rgba(44,83,100,0.9)), url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"%3E%3Crect fill="%232c5364" width="1200" height="800"/%3E%3C/svg%3E');
+            background-size: cover;
+            padding: 150px 20px 80px;
+            text-align: center;
+            color: white;
+            margin-top: 60px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .hero-highlight {
+            color: #00d4ff;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+        }
+
+        .hero-features {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+            font-size: 14px;
+        }
+
+        .hero-features span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .btn-primary {
+            background: #00d4ff;
+            color: #0f2027;
+            padding: 15px 35px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            transition: all 0.3s;
+            font-size: 16px;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,212,255,0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            padding: 15px 35px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            transition: all 0.3s;
+            border: 2px solid #00d4ff;
+        }
+
+        .btn-secondary:hover {
+            background: #00d4ff;
+            color: #0f2027;
+        }
+
+        .whatsapp-btn {
+            background: #25D366;
+            color: white;
+            padding: 15px 35px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+
+        .whatsapp-btn:hover {
+            background: #128C7E;
+            transform: translateY(-3px);
+        }
+
+        .section {
+            padding: 80px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 15px;
+            color: #0f2027;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 50px;
+        }
+
+        .trust-section {
+            background: #f8f9fa;
+            padding: 80px 20px;
+        }
+
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .trust-card {
+            background: white;
+            padding: 35px 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border-top: 4px solid #00d4ff;
+        }
+
+        .trust-card.featured {
+            background: linear-gradient(135deg, #ffd700, #ffed4e);
+            border-top: 4px solid #ff8800;
+        }
+
+        .trust-icon {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .trust-card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #0f2027;
+        }
+
+        .trust-card p {
+            color: #666;
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        .services-section {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .services-intro {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+
+        .services-intro img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .reasons-section {
+            padding: 80px 20px;
+            background: #f8f9fa;
+        }
+
+        .reasons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .reason-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border-left: 4px solid #00d4ff;
+        }
+
+        .reason-card h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #0f2027;
+        }
+
+        .reason-card p {
+            color: #666;
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        .how-section {
+            background: white;
+            padding: 80px 20px;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .step {
+            text-align: center;
+        }
+
+        .step-icon {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .step h4 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #0f2027;
+        }
+
+        .step p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .testimonials-section {
+            padding: 80px 20px;
+            background: #f8f9fa;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .testimonial {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 4px solid #00d4ff;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-avatar {
+            width: 50px;
+            height: 50px;
+            background: #00d4ff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+        }
+
+        .testimonial-info h5 {
+            margin-bottom: 5px;
+            color: #0f2027;
+        }
+
+        .rating {
+            color: #ffd700;
+        }
+
+        .testimonial p {
+            color: #666;
+            line-height: 1.7;
+            font-style: italic;
+        }
+
+        .faq-section {
+            background: white;
+            padding: 80px 20px;
+        }
+
+        .faq-item {
+            background: #f8f9fa;
+            padding: 25px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border-left: 4px solid #00d4ff;
+        }
+
+        .faq-item:hover {
+            box-shadow: 0 5px 15px rgba(0,212,255,0.2);
+        }
+
+        .faq-question {
+            font-weight: bold;
+            color: #0f2027;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            display: none;
+            margin-top: 15px;
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .booking-section {
+            background: #1a1a1a;
+            color: white;
+            padding: 80px 20px;
+        }
+
+        .booking-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #0f2027;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: #00d4ff;
+            outline: none;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: #00d4ff;
+            color: #0f2027;
+            padding: 15px;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,212,255,0.4);
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #0f2027, #2c5364);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 60px 20px 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer h3 {
+            color: #00d4ff;
+            margin-bottom: 20px;
+        }
+
+        .footer p, .footer a {
+            color: #ccc;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .footer a:hover {
+            color: #00d4ff;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(0,212,255,0.3);
+            color: #999;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: #00d4ff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #0f2027;
+            font-size: 20px;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            transform: scale(1.1);
+            background: #00fff7;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 0 5px 20px rgba(37,211,102,0.5);
+            cursor: pointer;
+            transition: all 0.3s;
+            z-index: 999;
+            text-decoration: none;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+            .section-title {
+                font-size: 28px;
+            }
+            .header-content {
+                flex-direction: column;
+            }
+            .services-intro {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">🚖 ALLO TAXIS DIDCOT</div>
+            <div class="header-contacts">
+                <a href="tel:+441235603055" class="header-phone">📞 01235 603055</a>
+                <a href="mailto:bookings@allotaxididcot.com" class="header-email">✉️ Email Us</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>PREMIUM <span class="hero-highlight">DIDCOT TAXI</span> SOLUTIONS</h1>
+        <p>Experience exceptional transportation with ALLO Taxis Didcot Ltd. We deliver professional taxi services throughout Didcot and neighboring communities, specializing in local rides, corporate transfers, extended journeys, and competitively priced airport transportation - ready to serve you around the clock.</p>
+        
+        <div class="btn-group">
+            <a href="tel:+441235603055" class="btn-primary">📞 Call Now</a>
+            <a href="#booking" class="btn-secondary">Book a Taxi</a>
+            <a href="https://wa.me/441235603055" class="whatsapp-btn">💬 WhatsApp Now</a>
+        </div>
+
+        <div class="hero-features">
+            <span>✅ Licensed Drivers</span>
+            <span>🚕 24/7 Service</span>
+            <span>💰 Fixed Airport Fares</span>
+            <span>⭐ 5-Star Rated</span>
+        </div>
+        
+        <p style="margin-top: 20px; font-size: 16px;">We can also accept Booking and Inquiries Via WhatsApp 24/7</p>
+    </section>
+
+    <section class="trust-section">
+        <div class="container">
+            <h2 class="section-title">Certified, Authorized & Comprehensively Protected</h2>
+            
+            <div class="trust-grid">
+                <div class="trust-card">
+                    <div class="trust-icon">📋</div>
+                    <h3>Authorized Professional Chauffeurs</h3>
+                    <p>Every member of our driving team holds proper authorization from regional governing bodies, operating in full compliance with UK transportation standards for maximum passenger protection.</p>
+                </div>
+                
+                <div class="trust-card">
+                    <div class="trust-icon">🚗</div>
+                    <h3>Comprehensively Protected Fleet</h3>
+                    <p>Our entire vehicle collection carries complete insurance coverage for commercial passenger service and airport transportation – we never compromise on safety protocols.</p>
+                </div>
+                
+                <div class="trust-card">
+                    <div class="trust-icon">📍</div>
+                    <h3>Round-the-Clock Regional Service</h3>
+                    <p>Our operations run continuously throughout Didcot and adjacent regions, accommodating dawn airport departures and midnight collections alike.</p>
+                </div>
+                
+                <div class="trust-card">
+                    <div class="trust-icon">⭐</div>
+                    <h3>Top-Rated Customer Experience</h3>
+                    <p>Clients consistently select us for our time-precision, immaculate vehicles, and courteous service across both regional and airport routes.</p>
+                </div>
+                
+                <div class="trust-card featured">
+                    <div class="trust-icon">🏆</div>
+                    <h3>Decade of Regional Excellence</h3>
+                    <p>Operating as your neighborhood Didcot transportation provider, we emphasize timely arrivals, pristine vehicles, and expert drivers. From brief local trips to Harwell Campus shuttles or dependable airport connections, we're your trusted partner.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="reasons-section">
+        <div class="container">
+            <h2 class="section-title">Why Choose Allotaxididcot for Your Didcot Taxi?</h2>
+            
+            <div class="reasons-grid">
+                <div class="reason-card">
+                    <h3>✅ Licensed & Insured Drivers</h3>
+                    <p>All drivers are fully licensed and insured, ensuring safe and compliant journeys every time.</p>
+                </div>
+                
+                <div class="reason-card">
+                    <h3>📍 Local Didcot Operators</h3>
+                    <p>We are a local taxi company, not a national booking platform or call centre.</p>
+                </div>
+                
+                <div class="reason-card">
+                    <h3>💰 Fixed Airport Fares</h3>
+                    <p>Airport journeys are quoted upfront with no surge pricing or hidden costs.</p>
+                </div>
+                
+                <div class="reason-card">
+                    <h3>🕐 24/7 Availability</h3>
+                    <p>Book a taxi anytime – early mornings, late nights, weekends, and holidays.</p>
+                </div>
+                
+                <div class="reason-card">
+                    <h3>🚗 Clean & Comfortable Vehicles</h3>
+                    <p>Well-maintained cars suitable for short trips and long-distance travel.</p>
+                </div>
+                
+                <div class="reason-card">
+                    <h3>⏰ Reliable Pickups</h3>
+                    <p>We focus on punctual arrivals, especially for stations and airport transfers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services-section">
+        <div class="container">
+            <h2 class="section-title">Support & Security</h2>
+            <p class="section-subtitle">Your safety is our top priority</p>
+            
+            <div class="services-intro">
+                <div>
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Crect fill='%232c5364' width='800' height='600'/%3E%3Ctext x='400' y='280' font-size='60' fill='%2300d4ff' text-anchor='middle'%3E🔒 Safe %26 Secure%3C/text%3E%3Ctext x='400' y='340' font-size='30' fill='%23ffffff' text-anchor='middle'%3EGPS Tracked Vehicles%3C/text%3E%3C/svg%3E" alt="Safe Taxi Service">
+                </div>
+                <div>
+                    <p style="margin-bottom: 20px;">At Allo Taxi, your safety is our top priority. All of our taxis are GPS-enabled, allowing us to monitor your ride for added security and peace of mind.</p>
+                    
+                    <p style="margin-bottom: 20px;">If you ever feel uncomfortable or have concerns during your journey, don't hesitate to contact our customer support team. We're also available to assist with any booking inquiries or issues you may have.</p>
+                    
+                    <p style="margin-bottom: 20px;">Allo Taxi is fully committed to exceptional customer care, always striving to deliver high-quality service at affordable rates. Our fleet includes a wide variety of vehicles to suit your needs, from small cars to larger options, all fully licensed and maintained to the highest standards.</p>
+                    
+                    <p>Rest easy knowing there are no hidden costs – you only pay the quoted price at the time of booking. Our goal is to provide seamless, cost-effective transfers, ensuring the best possible travel experience for every passenger.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-section">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <p class="section-subtitle">Find and book a cheap Didcot taxi with our online taxi comparison service</p>
+            
+            <div class="steps-grid">
+                <div class="step">
+                    <div class="step-icon">📍</div>
+                    <h4>Pick Your Location and Time</h4>
+                    <p>Pick a destination and date and we'll search 1,000's of taxi providers to find you the best value.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-icon">🚕</div>
+                    <h4>Choose Your Ride</h4>
+                    <p>Choose from a range of cars to suit your needs. All licensed, high quality drivers.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-icon">💳</div>
+                    <h4>Pay Securely</h4>
+                    <p>Pay for your fixed price ride securely through our website or app.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-icon">✅</div>
+                    <h4>Ride with Confidence</h4>
+                    <p>Drivers and their cab providers independently rated by customers.</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <p style="margin-bottom: 15px; font-weight: bold;">Pay with:</p>
+                <p>💳 Mastercard | 💳 Visa | 💳 Amex | 💰 PayPal | 📱 Google Pay</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title">What Our Customers Say</h2>
+            <p class="section-subtitle">⭐⭐⭐⭐⭐ 251 Google Reviews</p>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">TS</div>
+                        <div class="testimonial-info">
+                            <h5>Twelve Servants</h5>
+                            <div class="rating">★★★★★</div>
+                        </div>
+                    </div>
+                    <p>Fantastic service; taxi arrived on time, was clean and efficient. Excellent and quick responses when booking the taxi via email which involved setting out various pick ups and drop offs with last minute changes accommodated.</p>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">CA</div>
+                        <div class="testimonial-info">
+                            <h5>Claire Adams</h5>
+                            <div class="rating">★★★★★</div>
+                        </div>
+                    </div>
+                    <p>Akim was excellent - great communication, quick to respond and arrived promptly at an ungodly hour to go to Gatwick. We'll be booking again.</p>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">LT</div>
+                        <div class="testimonial-info">
+                            <h5>Lizzie Thompson</h5>
+                            <div class="rating">★★★★★</div>
+                        </div>
+                    </div>
+                    <p>Fantastic service from Akim. Quick response to my enquiry and great communication there after. Akim helped to make perhaps one of the most stressful parts of going away, very calm! Thank you, will absolutely book your services again.</p>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">PW</div>
+                        <div class="testimonial-info">
+                            <h5>Pete Way</h5>
+                            <div class="rating">★★★★★</div>
+                        </div>
+                    </div>
+                    <p>Exceptional service, always on time and very friendly - two super quick airport runs and even hand delivered a bag we left behind the next day - definitely recommend!!!</p>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">SR</div>
+                        <div class="testimonial-info">
+                            <h5>Sam RSP</h5>
+                            <div class="rating">★★★★★</div>
+                        </div>
+                    </div>
+                    <p>It's been a while since I've come across a taxi service as good as Allo Taxi. Many others seem to overcharge, but Allo offers very reasonable prices. We've used them several times, and I must highlight their punctuality – it's consistently excellent!</p>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">LR</div>
+                        <div class="testimonial-info">
+                            <h5>Luke Raimbach</h5>
+                            <div class="rating">★★★★★</div>
+                        </div>
+                    </div>
+                    <p>Our driver waited until after midnight following our delayed landing at Heathrow T5, and diligently drove six of us, plus luggage, safely home. Thoughtful provision of water and passenger comfort for the 70 minute airport transfer. Thank you!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            
+            <div class="faq-item" onclick="this.classList.toggle('active')">
+                <div class="faq-question">
+                    <span>How can I book a taxi with your Didcot taxi company?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    You can book a taxi by phone, WhatsApp, or through our online booking form. Instant bookings are available for local trips, while advance bookings are ideal for airports and stations. Once booked, you'll receive confirmation of your pickup details. Our process is simple, fast, and designed to minimise delays.
+                </div>
+            </div>
+            
+            <div class="faq-item" onclick="this.classList.toggle('active')">
+                <div class="faq-question">
+                    <span>Do you provide a 24/7 taxi service in Didcot?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    Yes! We operate 24 hours a day, 7 days a week, including early mornings, late nights, weekends, and holidays. You can book a taxi anytime you need one.
+                </div>
+            </div>
+            
+            <div class="faq-item" onclick="this.classList.toggle('active')">
+                <div class="faq-question">
+                    <span>Do you offer fixed prices for airport transfers from Didcot?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    Yes, all airport transfers are quoted with fixed prices upfront. No surge pricing, no hidden costs – you pay exactly what was quoted at booking.
+                </div>
+            </div>
+            
+            <div class="faq-item" onclick="this.classList.toggle('active')">
+                <div class="faq-question">
+                    <span>Can I book a taxi to Didcot Parkway railway station in advance?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    Absolutely! We recommend advance bookings for railway station pickups to ensure timely arrivals. You can book via phone, WhatsApp, or our online form.
+                </div>
+            </div>
+            
+            <div class="faq-item" onclick="this.classList.toggle('active')">
+                <div class="faq-question">
+                    <span>Do you provide 8-seater taxis in Didcot?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    Yes, we have a variety of vehicles in our fleet, including larger vehicles for groups. Please mention your requirements when booking.
+                </div>
+            </div>
+            
+            <div class="faq-item" onclick="this.classList.toggle('active')">
+                <div class="faq-question">
+                    <span>Are your drivers licensed and vehicles insured?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    Yes, all our drivers are fully licensed by local authorities and all vehicles are comprehensively insured for passenger transport and airport transfers. Your safety is our priority.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="booking-section" id="booking">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">Book a Taxi in Didcot</h2>
+            <p class="section-subtitle" style="color: #ccc;">Reliable local taxis and fixed-price airport transfers available 24/7</p>
+            
+            <div class="booking-form">
+                <form>
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" placeholder="your@email.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>WhatsApp No</label>
+                        <input type="tel" placeholder="Your WhatsApp Number">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Pickup Address</label>
+                        <input type="text" placeholder="Where should we pick you up?" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Select Service</label>
+                        <select required>
+                            <option value="">Select Service</option>
+                            <option value="local">Local Journey</option>
+                            <option value="airport">Airport Transfer</option>
+                            <option value="station">Railway Station</option>
+                            <option value="business">Business Travel</option>
+                            <option value="long">Long Distance</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea placeholder="Pickup time, destination, flight details (if airport)"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Book My Taxi</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Book Your Ride?</h2>
+            <p style="margin-bottom: 30px; font-size: 18px;">Available 24/7, including holidays. Book now for instant confirmation!</p>
+            <div class="btn-group">
+                <a href="tel:+441235603055" class="btn-primary">📞 Call: 01235 603055</a>
+                <a href="https://wa.me/441235603055" class="whatsapp-btn">💬 WhatsApp Us</a>
+                <a href="mailto:bookings@allotaxididcot.com" class="btn-secondary">✉️ Email Us</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h3>🚖 ALLO TAXIS DIDCOT</h3>
+                    <p>Your trusted local taxi service for Didcot and surrounding areas. Licensed, insured, and available 24/7.</p>
+                    <div class="social-links">
+                        <a href="#" title="Facebook">f</a>
+                        <a href="#" title="Instagram">📷</a>
+                        <a href="#" title="Twitter">🐦</a>
+                        <a href="#" title="YouTube">▶️</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3>Taxi Services</h3>
+                    <a href="#">Taxi Services Didcot</a>
+                    <a href="#">Taxi Faringdon</a>
+                    <a href="#">Taxi Reading</a>
+                    <a href="#">Taxi Oxford</a>
+                    <a href="#">Taxi Milton Height</a>
+                    <a href="#">Taxi Long Wittenham</a>
+                </div>
+                
+                <div>
+                    <h3>Quick Links</h3>
+                    <a href="#">Home</a>
+                    <a href="#booking">Book Online</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Local Taxi Services</a>
+                    <a href="#">Blog</a>
+                </div>
+                
+                <div>
+                    <h3>Book Your Taxi</h3>
+                    <p><a href="tel:+441235603055">📞 01235 603055</a></p>
+                    <p><a href="mailto:bookings@allotaxididcot.com">📧 bookings@allotaxididcot.com</a></p>
+                    <p>⏰ Available 24/7, including holidays</p>
+                    <a href="#booking" style="display: inline-block; margin-top: 15px; background: #00d4ff; color: #0f2027; padding: 10px 20px; border-radius: 25px; font-weight: bold;">Book Online</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 ALLO Taxis Didcot Ltd - Licensed & Insured Taxi Service</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/441235603055" class="whatsapp-float" title="Chat on WhatsApp">💬</a>
+
+    <script>
+        // FAQ Toggle
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.addEventListener('click', function() {
+                // Close other FAQs
+                document.querySelectorAll('.faq-item').forEach(otherItem => {
+                    if (otherItem !== this) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                // Toggle current FAQ
+                this.classList.toggle('active');
+            });
+        });
+
+        // Form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your booking request! We will contact you shortly to confirm your taxi booking.');
+            this.reset();
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
